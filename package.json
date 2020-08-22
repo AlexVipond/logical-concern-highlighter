@@ -12,8 +12,9 @@
     "@baleada/tailwind-config-utils": "^0.3.0",
     "@baleada/tailwind-linear-numeric": "^0.8.8",
     "@baleada/tailwind-theme": "^0.1.7",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
     "tailwindcss": "^1.7.3",
-    "vite": "^1.0.0-rc.1",
-    "@vue/compiler-sfc": "^3.0.0-rc.1"
+    "vite": "^1.0.0-rc.1"
   }
 }
