@@ -1,14 +1,15 @@
 <template>
   <main class="bg-gray-80 p-10">
     <section class="relative w-auto bg-white p-10">
-      <textarea
+      <!-- <textarea
         type="text"
         class="form-input"
         @input="({ target: { value } }) => (code = value)"
         :value="code"
-      />
+      /> -->
     </section>
-    <section class="mt-10 relative w-auto bg-white">
+    <section class="mt-10 relative w-auto bg-white flex flex-row">
+      <pre><code>{{ lineNumbers }}</code></pre>
       <pre><code>{{ code }}</code></pre>
       <div
         class="absolute h-full w-full top-0 left-0"
@@ -27,8 +28,9 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import rawConcerns from './concerns/useListbox'
+import { ref, computed } from 'vue'
+import rawCode from './code/Listbox.js'
+import rawConcerns from './concerns/Listbox'
 import toConcerns from './toConcerns'
 import Highlight from './Highlight.vue'
 
@@ -38,8 +40,21 @@ export default {
     Highlight,
   },
   setup () {
-    const code = ref('')
-    return { code, concerns: toConcerns(rawConcerns) }
+    const code = ref(rawCode),
+          lines = computed(() => code.value.split('\n').length),
+          lineNumbers = computed(() => {
+            let lineNumbers = ''
+            for (let i = 1; i <= lines.value; i++) {
+              lineNumbers += `${i}\n`
+            }
+            return lineNumbers
+          })    
+
+    return {
+      lineNumbers,
+      code,
+      concerns: toConcerns(rawConcerns)
+    }
   }
 }
 </script>
