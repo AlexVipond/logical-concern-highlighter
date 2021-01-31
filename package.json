@@ -11,10 +11,11 @@
   "devDependencies": {
     "@baleada/tailwind-config-utils": "^0.3.0",
     "@baleada/tailwind-linear-numeric": "^0.8.8",
-    "@baleada/tailwind-theme": "^0.1.7",
-    "@tailwindcss/custom-forms": "^0.2.1",
+    "@baleada/tailwind-theme": "^0.3.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.0-rc.1",
-    "tailwindcss": "^1.7.3",
-    "vite": "^1.0.0-rc.1"
+    "tailwindcss": "^2.0.2",
+    "vite": "^2.0.0-beta.60"
   }
 }

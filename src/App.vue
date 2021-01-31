@@ -1,14 +1,6 @@
 <template>
   <main class="bg-gray-80 p-10">
-    <section class="relative w-auto bg-white p-10">
-      <!-- <textarea
-        type="text"
-        class="form-input"
-        @input="({ target: { value } }) => (code = value)"
-        :value="code"
-      /> -->
-    </section>
-    <section class="mt-10 relative w-auto bg-white flex flex-row">
+    <section class="mt-10 relative w-auto bg-white flex">
       <pre><code>{{ lineNumbers }}</code></pre>
       <pre><code>{{ code }}</code></pre>
       <div
@@ -16,7 +8,7 @@
         v-for="{ concern, classes, lines } in concerns"
         :key="concern"
       >
-        <highlight
+        <Highlight
           v-for="line in lines"
           :key="line"
           :class="classes"
@@ -29,9 +21,9 @@
 
 <script>
 import { ref, computed } from 'vue'
-import rawCode from './code/Listbox.js'
-import rawConcerns from './concerns/Listbox'
-import toConcerns from './toConcerns'
+import rawCode from './code/useListbox.js'
+import rawConcerns from './concerns/useListbox.js'
+import toConcerns from './toConcerns.js'
 import Highlight from './Highlight.vue'
 
 export default {

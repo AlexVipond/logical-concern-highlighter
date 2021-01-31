@@ -1,63 +1,61 @@
 export default [
   {
-    concern: 'DOM ref setup',
+    concern: 'BOILERPLATE',
     classes: 'text-blue-30 opacity-80',
     lines: [
-      '9-43',
-      '295-300',
-    ]
+      1,
+      '3-12',
+      '284-298',
+    ],
   },
   {
-    concern: 'Options data setup',
+    concern: 'SELECTED',
     classes: 'text-blue-70 opacity-80',
     lines: [
-      '44-64',
-    ]
+      '13-58',
+    ],
   },
   {
-    concern: 'Selected option',
+    concern: 'TYPEAHEAD',
     classes: 'text-green-30 opacity-80',
     lines: [
-      '65-103',
-    ]
+      2,
+      '59-83',
+    ],
   },
   {
-    concern: 'Active option',
+    concern: 'ACTIVE',
     classes: 'text-green-70 opacity-80',
     lines: [
-      '104-162',
-    ]
+      '84-166',
+    ],
   },
   {
-    concern: 'Typeahead',
+    concern: 'OPEN/CLOSED',
     classes: 'text-red-30 opacity-80',
     lines: [
-      2,
-      '163-193',
-      '291-294',
-    ]
+      '167-224',
+    ],
   },
   {
-    concern: 'List open state',
+    concern: 'WAI ARIA BASICS',
     classes: 'text-red-70 opacity-80',
     lines: [
-      '194-246'
-    ]
+      '225-269',
+    ],
   },
   {
-    concern: 'Button focus state',
+    concern: 'BUTTON FOCUS',
     classes: 'text-orange-30 opacity-80',
     lines: [
-      '247-257'
-    ]
+      '270-283',
+    ],
   },
   {
-    concern: 'Boilerplate',
+    concern: 'UTIL',
     classes: 'text-orange-70 opacity-80',
     lines: [
-      1,
-      '3-8',
-      '258-290',
-    ]
+      '299-336',
+    ],
   },
 ]
