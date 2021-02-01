@@ -1,5 +1,8 @@
 <template>
-  <main class="bg-gray-80 p-10">
+  <main class="bg-gray-80 p-12 h-screen w-screen flex">
+    <IndentationHistogram :code="code" />
+  </main>
+  <main class="bg-gray-80 p-12">
     <section class="mt-10 relative w-auto bg-white flex">
       <pre><code>{{ lineNumbers }}</code></pre>
       <pre><code>{{ code }}</code></pre>
@@ -21,15 +24,19 @@
 
 <script>
 import { ref, computed } from 'vue'
-import rawCode from './code/useListbox.js'
-import rawConcerns from './concerns/useListbox.js'
+// import rawCode from './code/useListbox.js'
+// import rawConcerns from './concerns/useListbox.js'
+import rawCode from './code/Listbox.js'
+import rawConcerns from './concerns/Listbox.js'
 import toConcerns from './toConcerns.js'
 import Highlight from './Highlight.vue'
+import IndentationHistogram from './IndentationHistogram.vue'
 
 export default {
   name: 'App',
   components: {
     Highlight,
+    IndentationHistogram,
   },
   setup () {
     const code = ref(rawCode),
@@ -40,7 +47,7 @@ export default {
               lineNumbers += `${i}\n`
             }
             return lineNumbers
-          })    
+          })
 
     return {
       lineNumbers,
